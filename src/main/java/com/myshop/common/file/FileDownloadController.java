@@ -19,7 +19,7 @@ public class FileDownloadController {
 	                        HttpServletResponse response, HttpServletRequest request) throws Exception {
 		OutputStream out = response.getOutputStream();
 		String CURR_IMAGE_REPO_PATH = request.getSession().getServletContext().getRealPath("/shopImage/shopping/file_repo");
-		String filePath=CURR_IMAGE_REPO_PATH+"\\"+goods_id+"\\"+fileName;
+		String filePath=CURR_IMAGE_REPO_PATH+"/"+goods_id+"/"+fileName;
 		File image=new File(filePath);
 
 		response.setHeader("Cache-Control","no-cache");
@@ -43,7 +43,7 @@ public class FileDownloadController {
 	                          HttpServletResponse response, HttpServletRequest request) throws Exception {
 		OutputStream out = response.getOutputStream();
 		String CURR_IMAGE_REPO_PATH = request.getSession().getServletContext().getRealPath("/shopImage/shopping/file_repo");
-		String filePath=CURR_IMAGE_REPO_PATH+"\\"+goods_id+"\\"+fileName;
+		String filePath=CURR_IMAGE_REPO_PATH+"/"+goods_id+"/"+fileName;
 		File image=new File(filePath);
 
 		int lastIndex = fileName.lastIndexOf(".");
